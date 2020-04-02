@@ -12,6 +12,5 @@ exports.seed = function(knex) {
         .insert(data)
         .returning("*");
     })
-    .then(result => console.log(result))
     .catch(err => console.log(err));
 };

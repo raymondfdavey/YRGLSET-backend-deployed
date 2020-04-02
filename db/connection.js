@@ -3,7 +3,11 @@ const knex = require("knex");
 
 const dbConfig =
   ENV === "production"
-    ? { client: "pg", connection: process.env.DATABASE_URL }
+    ? {
+        client: "pg",
+        connection: process.env.DATABASE_URL,
+        rejectUnauthorized: false
+      }
     : require("../knexfile");
 
 const connection = knex(dbConfig);
