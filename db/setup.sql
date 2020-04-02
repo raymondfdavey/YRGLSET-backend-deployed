@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS usergoals_test;
+DROP DATABASE IF EXISTS usergoals;
+
+CREATE DATABASE usergoals_test;
+CREATE DATABASE usergoals;
