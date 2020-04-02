@@ -23,6 +23,7 @@ const customConfig = {
     }
   },
   production: {
+    sslmode: require,
     connection: `${DB_URL}?ssl=true`
   }
 };
