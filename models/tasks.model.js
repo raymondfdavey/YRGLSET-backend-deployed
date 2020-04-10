@@ -24,9 +24,9 @@ exports.createTask = (newTask) => {
   //   )
   //   .then(result => result.rows);
 };
-exports.makeTaskComplete = (goal, thoughts) => {
+exports.makeTaskComplete = (goal_id, thoughts) => {
   return connection("goals")
-    .where("goal", "=", goal)
+    .where("goal_id", "=", goal_id)
     .update({ completed: 1, thoughts }, "*")
     .then((result) => result)
     .catch((err) => console.log(err));

@@ -21,8 +21,8 @@ exports.postTask = (req, res, next) => {
   });
 };
 exports.completeTask = (req, res, next) => {
-  const { goal, thoughts } = req.body;
-  makeTaskComplete(goal, thoughts).then((completedTasks) =>
+  const { goal_id, thoughts } = req.body;
+  makeTaskComplete(goal_id, thoughts).then((completedTasks) =>
     res.status(200).send({ completedGoals: completedTasks })
   );
 };
