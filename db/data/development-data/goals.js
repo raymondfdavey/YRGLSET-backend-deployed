@@ -1,43 +1,43 @@
 const goalsData = [
   { year: 2020, task: "real test", reason: "hehjas" },
-  { year: 2020, task: "blah de blah", reason: "hehjas" },
-  { year: 2020, task: "blah de blah", reason: "hehjas" },
-  { year: 2020, task: "blah de blah", reason: "hehjas" },
-  { year: 2020, task: "blah de blah", reason: "hehjas" },
+  { year: 2020, goal: "blah de blah", reason: "hehjas" },
+  { year: 2020, goal: "blah de blah", reason: "hehjas" },
+  { year: 2020, goal: "blah de blah", reason: "hehjas" },
+  { year: 2020, goal: "blah de blah", reason: "hehjas" },
   {
     year: 2020,
-    task: "blah de blah",
+    goal: "blah de blah",
     reason: "hehjas",
     completed: "1",
-    notes: "sjaskjkasj"
+    thoughts: "sjaskjkasj",
   },
   {
     year: 2020,
-    task: "blah de blah",
+    goal: "blah de blah",
     reason: "hehjas",
     completed: "1",
-    notes: "sjaskjkasj"
+    thoughts: "sjaskjkasj",
   },
   {
     year: 2020,
-    task: "blah de blah",
+    goal: "blah de blah",
     reason: "hehjas",
     completed: "1",
-    notes: "sjaskjkasj"
+    thoughts: "sjaskjkasj",
   },
   {
     year: 2020,
-    task: "blah de blah",
+    goal: "blah de blah",
     reason: "hehjas",
     completed: "1",
-    notes: "sjaskjkasj"
+    thoughts: "sjaskjkasj",
   },
   {
     year: 2020,
-    task: "blah de blah",
+    goal: "blah de blah",
     reason: "hehjas",
     completed: "1",
-    notes: "sjaskjkasj"
-  }
+    thoughts: "sjaskjkasj",
+  },
 ];
 module.exports = goalsData;
