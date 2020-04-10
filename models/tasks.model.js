@@ -41,8 +41,7 @@ exports.deleteTask = (goal_id) => {
   console.log("in delete model", goal_id);
   return connection("goals")
     .where("goal_id", "=", goal_id)
-    .update({ deleted: 1 }, "*")
-    .then((result) => result)
+    .del()
     .catch((err) => console.log(err));
   // return db
   //   .query("UPDATE goals SET deleted = '1' WHERE goal = $1 RETURNING *;", [
