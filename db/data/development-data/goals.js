@@ -1,5 +1,5 @@
 const goalsData = [
-  { year: 2020, task: "real test", reason: "hehjas" },
+  { year: 2020, goal: "real test", reason: "hehjas" },
   { year: 2020, goal: "blah de blah", reason: "hehjas" },
   { year: 2020, goal: "blah de blah", reason: "hehjas" },
   { year: 2020, goal: "blah de blah", reason: "hehjas" },

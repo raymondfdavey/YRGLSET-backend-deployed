@@ -28,10 +28,8 @@ exports.completeTask = (req, res, next) => {
 };
 exports.removeTask = (req, res, next) => {
   console.log("in controller");
-  const { goal } = req.body;
-  deletegoal(goal).then((result) => {
-    console.log(result);
-
+  const { goal_id } = req.body;
+  deleteTask(goal_id).then((result) => {
     res.status(200).send({ deletedGoals: result });
   });
 };
