@@ -1,21 +1,21 @@
 const connection = require("../db/connection");
 
-exports.fetchTasks = year => {
+exports.fetchTasks = (year) => {
   return connection
     .select("*")
     .from("goals")
     .where("year", "=", year)
-    .then(result => result);
+    .then((result) => result);
   // console.log("in model");
   // return db.query("SELECT * FROM goals;").then(result => result.rows);
 };
-exports.createTask = newTask => {
+exports.createTask = (newTask) => {
   console.log("in new task model");
-  const { year, task, reason } = newTask;
+  const { year, goal, reason } = newTask;
   return connection("goals")
-    .insert({ year, task, reason }, "*")
-    .then(result => result)
-    .catch(err => console.log(err));
+    .insert({ year, goal, reason }, "*")
+    .then((result) => result)
+    .catch((err) => console.log(err));
 
   // return db
   //   .query(
@@ -24,12 +24,12 @@ exports.createTask = newTask => {
   //   )
   //   .then(result => result.rows);
 };
-exports.makeTaskComplete = (task, notes) => {
+exports.makeTaskComplete = (goal, thoughts) => {
   return connection("goals")
-    .where("task", "=", task)
-    .update({ completed: 1, notes }, "*")
-    .then(result => result)
-    .catch(err => console.log(err));
+    .where("goal", "=", goal)
+    .update({ completed: 1, thoughts }, "*")
+    .then((result) => result)
+    .catch((err) => console.log(err));
   // return db
   //   .query(
   //     "UPDATE goals SET completed = '1', notes = 'it was suprisingly tricky' WHERE task = $1 RETURNING *;",
@@ -37,15 +37,15 @@ exports.makeTaskComplete = (task, notes) => {
   //   )
   //   .then(result => result.rows);
 };
-exports.deleteTask = task => {
-  console.log("in delete model", task);
+exports.deleteTask = (goal) => {
+  console.log("in delete model", goal);
   return connection("goals")
-    .where("task", "=", task)
+    .where("goal", "=", goal)
     .update({ deleted: 1 }, "*")
-    .then(result => result)
-    .catch(err => console.log(err));
+    .then((result) => result)
+    .catch((err) => console.log(err));
   // return db
-  //   .query("UPDATE goals SET deleted = '1' WHERE task = $1 RETURNING *;", [
+  //   .query("UPDATE goals SET deleted = '1' WHERE goal = $1 RETURNING *;", [
   //     task
   //   ])
   //   .then(result => result.rows);

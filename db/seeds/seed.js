@@ -1,5 +1,5 @@
 const data = require("../data/index");
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   console.log("seeding");
 
   return knex.migrate
@@ -8,9 +8,7 @@ exports.seed = function(knex) {
       return knex.migrate.latest();
     })
     .then(() => {
-      return knex("goals")
-        .insert(data)
-        .returning("*");
+      return knex("goals").insert(data).returning("*");
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 };

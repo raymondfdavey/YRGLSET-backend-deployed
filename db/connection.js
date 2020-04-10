@@ -4,9 +4,9 @@ const knex = require("knex");
 const dbConfig =
   ENV === "production"
     ? {
+        rejectUnauthorized: true,
         client: "pg",
-        connection: process.env.DATABASE_URL,
-        rejectUnauthorized: false
+        connection: process.env.DATABASE_URL
       }
     : require("../knexfile");
 

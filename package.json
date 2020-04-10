@@ -7,7 +7,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.20.13",
-    "pg": "^8.0.0"
+    "pg": "^7.18.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
@@ -15,7 +15,7 @@
   "scripts": {
     "seed:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex seed:run",
     "migrate-latest:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:latest",
-    "migrate-rollback:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:rollback",
+    "migrate-rollback:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URLnpm) knex migrate:rollback",
     "seed": "knex seed:run",
     "setup": "psql -f ./db/setup.sql",
     "start": "node listen.js",
