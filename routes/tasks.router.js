@@ -6,6 +6,8 @@ const {
   removeTask
 } = require("../controllers/tasks.controller");
 
+tasksRouter.get("/", (req, res) => res.status(200).send({message: "seems to be ok - /goals"}));
+
 tasksRouter
   .route("/:year")
   .get(getTasks)
